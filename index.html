@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VISORA – Real-Time AI Coach</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="visora-app">
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="logo">
+        <div class="logo-icon">👁</div>
+        <span class="logo-name">VISORA</span>
+        <span class="logo-sub">Real-Time Multimodal AI Coach</span>
+      </div>
+      <div class="live-badge">
+        <span class="live-text">LIVE</span>
+        <div class="live-dot"></div>
+        <span id="timer" class="timer-text">Session: 0:00:00</span>
+      </div>
+    </div>
+
+    <!-- Hero Text -->
+    <div class="hero-text">
+      AI sees what you're doing.<br>
+      AI tells you what to do next.
+    </div>
+
+    <!-- Main Grid -->
+    <div class="main-grid">
+
+      <!-- Webcam Panel -->
+      <div class="cam-wrap">
+        <video id="webcam" autoplay playsinline muted></video>
+        <canvas id="canvas" style="display:none;"></canvas>
+        <div class="cam-overlay" id="cam-overlay">
+          <span class="cam-placeholder-text">📷 Camera will appear here</span>
+        </div>
+        <div class="cam-status">
+          <span class="ai-watch" id="ai-watch-label">AI WATCHING...</span>
+          <div class="pause-dots">
+            <div class="pause-bar"></div>
+            <div class="pause-bar"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coach Panel -->
+      <div class="coach-panel">
+        <div class="coach-label">AI COACH GUIDANCE:</div>
+        <div class="coach-text" id="coach-text">
+          Press <strong>Start Coaching Session</strong> below to begin. Make sure to allow camera access when prompted.
+        </div>
+        <hr class="coach-divider" />
+        <div class="coach-footer">
+          <button class="mute-btn" id="mute-btn" title="Toggle voice">
+            🔊
+          </button>
+          <div class="step-info">
+            <span id="step-label">Waiting to start...</span>
+            <div class="step-bar">
+              <div class="step-fill" id="step-fill" style="width: 0%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Button -->
+    <div class="bottom-bar">
+      <button class="start-btn" id="startBtn">▶ Start Coaching Session</button>
+    </div>
+    <div class="bottom-bar">
+      <button class="stop-btn" id="stopBtn">Session Ended</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
