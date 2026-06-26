@@ -1,5 +1,5 @@
 // === VISORA - script.js ===
-const API_KEY = 'AIzaSyAf9gBab6YbLH4leSQGehBmNJmWZDsJ-tM';
+const API_KEY = 'AQ.Ab8RN6Iyzkpwe_-samZhLXKw_4tlwUsghDYhqYkmDeV1gLsX4A';
 
 // === DOM Elements ===
 const video = document.getElementById('webcam');
